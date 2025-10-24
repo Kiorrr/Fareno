@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Design tokens */
+:root {
+  /* Base neutrals */
+  --background: 255 255 255; /* white */
+  --foreground: 23 23 23; /* zinc-900 */
+  --muted: 244 244 245; /* zinc-100 */
+  --border: 228 228 231; /* zinc-200 */
+
+  /* Brand accents */
+  --accent: 14 165 233; /* sky-500 (bleu électrique) */
+  --accent-foreground: 255 255 255; /* on accent */
+
+  --success: 16 185 129; /* emerald-500 */
+  --danger: 244 63 94; /* rose-500 */
+  --warning: 234 179 8; /* yellow-500 */
+
+  /* Typography */
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+@theme inline {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-muted: rgb(var(--muted));
+  --color-border: rgb(var(--border));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+  --color-success: rgb(var(--success));
+  --color-danger: rgb(var(--danger));
+  --color-warning: rgb(var(--warning));
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 10 10 10; /* near black */
+    --foreground: 237 237 237; /* zinc-200 */
+    --muted: 24 24 27; /* zinc-900 */
+    --border: 39 39 42; /* zinc-800 */
+
+    --accent: 59 130 246; /* blue-500 */
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
